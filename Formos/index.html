@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <form>
+            <label for="Vardas:">
+                <div>
+                    Vardas:
+                </div>
+                <input name="Vardas:" type="text">
+            </label>
+            <label for="Pavardė:">
+                <div>
+                    Pavardė:
+                </div>
+                <input name="Pavardė:" type="text">
+
+            </label> 
+
+        </form>
+
+        <label for="Gyvūnai">
+            <div>Gyvūnai</div>
+            <select name="Gyvūnai">
+                
+                <option value="">--Pasirinkite variantą--</option>/option>
+                <option value="Šunys">Šunys</option>
+                <option value="Katės">Katės</option>
+                <option value="Šeškai">Šeškai</option>
+                <option value="Paukščiai">Paukščiai</option>
+                <option value="Graužikai">Graužikai</option>
+            </select>
+        </label>
+
+
+        <form>
+        <label for="Tekstare">
+            <div>
+             <h3>Description</h3> 
+            </div>
+            <div>
+            <textarea maxlength="100" required></textarea>>
+            </div>
+          </label>  
+
+        <label for="Subscribe">
+        Subscribe to newslatter
+        <input name="subscribe" type="checkbox">
+        </label>
+
+        <label for="email">
+            <div>
+                Email
+            </div>
+            <input name="email" type="email">
+        </label>
+
+        <div>
+            <input type="reset">
+        </div>
+
+        <div>
+            <button type="submit">Registruotis</button>
+        </div>
+        </form>
+    </body>
+</html>
