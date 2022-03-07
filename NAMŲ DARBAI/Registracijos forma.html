@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registracijos forma</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div><h3>Register</h3></div>
+
+            <form>
+                <label for="firstName">
+                    <div>First name *</div>
+                    <input name="firstName" type="text" required>
+                </label>
+                <label for="firstName">
+                    <div>Last name *</div>
+                    <input name="firstName" type="text" required>
+                </label>
+                <label for="email">
+                    <div>Email: *</div>
+                    <input name="email" type="email" required>
+                </label>
+                <br>
+                <br>
+                <div><textarea maxlength="200"></textarea></div>
+                <br>
+                <label for="genger">
+                    <div>Genger</div>
+                    <input name="genger" type="radio">Male
+                    <input name="genger" type="radio">Female
+                </label>
+                <br>
+                <br>
+                <label for="date">
+                    <div>Date of birthday</div>
+                    <input name="birthday" type="date">
+                </label>
+                <br>
+                <br>
+                <label for="adress">
+                    <div>Adress:</div>
+                    <input name="adress" type="adress">
+                </label>
+                <div>
+                    <p>City of birth</p>
+                </div>
+                <select name="city">
+                    <option>Vilnius</option>
+                    <option>Kaunas</option>
+                    <option>Klaipėda</option>
+                    <option>Šiauliai</option>
+                    <option>Panevėžys</option>
+                </select>
+                <br>
+                <br>
+                <div class="controls"></div>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+                <br>
+                <br>
+                <label for="newsletter">
+                    <div>Subscribe to the newslatter</div>
+                    <input name="newsletter" type="checkbox">
+                </label>
+            </form>
+        
+    </body>
+</html>
