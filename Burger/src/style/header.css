@@ -1,0 +1,54 @@
+body { font-family: "Bebas Neue", cursive; }
+
+header {
+    padding: 50px 56px;
+    display: flex;
+    justify-content: space-between;
+    background: url(..//assets/background.png);
+}
+
+.logo {
+    width: 263px;
+    height: 58px;
+    
+}
+
+.express-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 26px;
+}
+
+.express-container img {
+    margin-right: 8px;
+    height: 34px;
+}
+
+.express-container div {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color:#3d2514;
+}
+
+.express-container div, .right-side nav a {
+    color:#3d2514; 
+}
+
+.right-side nav a {
+    font-family: "Bebas Neue";
+    font-size: 22px;
+    margin: 0 26px;
+    letter-spacing: 4px;
+}
+
+.right-side nav a:first-child {
+    margin-left: 0 px;
+}
+
+.right-side nav a:last-child {
+    margin-right: 0px;
+}
+
+

@@ -1,0 +1,70 @@
+ .kubas, .staciakampis {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+    border: 2px;
+    background-color: red;
+    font;
+}
+
+.kubas div {
+    color: green;
+}
+
+.kubas span {
+    color: yellow;
+}
+.staciakampis {
+    width: 150px;
+    background-color: red;
+}
+
+a:visited {
+    color: blue;
+}
+
+input[type=text] {
+    background-color: yellow;
+}
+
+input[type=number] {
+    background-color: green;
+}
+
+input[type=email] {
+    background-color: red;
+}
+
+table, td {
+    border-collapse: collapse;
+    margin-top: 5px;
+    border: 1px solid;
+}
+
+td:nth-of-type(even) {
+    background-color: pink;
+}
+
+td:nth-of-type(odd) {
+    background-color: yellow;
+}
+
+tr:nth-of-type(odd) td:nth-of-type(odd) {
+    background-color: greenyellow;
+}
+
+.parent {
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+    margin-top: 20px;
+}
+
+.child {
+    width: 50px;
+    height: 50px;
+    background-color: maroon;
+    position: relative;
+    top: 25px;
+    left:25px;
+}

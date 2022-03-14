@@ -1,0 +1,71 @@
+.landing { 
+    background-image: url(../assets/background.png);
+    display: flex;
+    justify-content: space-between;
+    margin-top: -193px;
+    padding: 213px 56px 78px;
+}
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 76px;
+}
+
+.dashed {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    color: #3d2514;
+    border: 1px dashed #3d2514;
+    padding: 12px 18px 10px;
+}
+
+.landing h2, .landing h4 {
+    font-family: 'Alfa Slab One', cursive;
+    text-shadow: 4px 4.5px #fee8bc;
+}
+
+.landing h2 { font-size: 114px; }
+
+.landing h4 { font-size: 56px ; }
+
+.burger-container { position: relative; }
+
+.circle {
+    position: absolute;
+    left: 50px;
+    bottom: 0px;
+    right: 35px;
+    display: flex;
+    align-items: center;
+    background: #bf2222;
+    width: 174px;
+    height: 174px;
+    border-radius: 50%;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 152px;
+    height: 152px;
+    padding: 16px;
+    border: 2px dashed #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.price-top span:first-child { font-size: 70px; }
+
+.price-top span:last-child { font-size: 32px; }
+
+.price div:last-child { 
+    font-size: 30px; 
+    letter-spacing: 6px;
+
+}
+
+
