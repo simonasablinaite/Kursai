@@ -1,49 +1,37 @@
 .offers {
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     padding: 70px 108px;
+    margin: auto;
 }
 
-.offers > div { flex: 1 1 500px; }
-
-.card {
-    height: 192px;
-    padding: 30px 24px;
+.left-side-burger {
+    margin-right: 24px;
 }
 
-.big-card {
-    background: url(../assets/Big-foto.png) no-repeat;
-    width: 596px;
-    height: 420px;
-    margin-right: 42px;
-    padding: 30px 24px;
-}
-
-.card.first {
-    background: url(../assets/small-card_1.png) no-repeat;
-    margin-bottom: 35px;
-}
-
-.card.second {
-    background: url(../assets/small-card_2.png) no-repeat;
-}
-
-.card div {
+.burger-headings {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    color: #fff;
     width: 33%;
 }
 
-.big-card, .card h2 {
-    font-size: 38px;
+.burger-headings:first-of-type { width: 50%; }
+
+.burger-headings h4 { font-size: 28px; }
+
+.burger-headings h2 { font-size: 36px; }
+
+.right-side-burgers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
-.big-card, .card h4 { 
-    margin-bottom: 2px;
-    font-size: 25px;
-}
-
-.big-card, .card h2, .card h4 {
-    font-family: 'Bebas Neue', cursive;
-    font-weight: 700;
-    color: #fff;
+.relative {
+    position: relative;
 }
 
