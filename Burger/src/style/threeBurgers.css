@@ -3,6 +3,7 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 64px;
 }
 
 .single-burger {
@@ -43,4 +44,5 @@
     padding: 22px 36px 21px; 
     color: #fff;
     background-color: #bf2222;
+    text-transform: uppercase;
 }
