@@ -1,6 +1,7 @@
 .events {
     max-width: 1440px;
     margin: 64px auto;
+    position: relative;
 }
 
 .events article {
@@ -37,7 +38,7 @@
 .events ul {
     position: absolute;
     bottom: 32px;
-    left: 0
+    left: 25px
 }
 
 .events li {
