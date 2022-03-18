@@ -1,0 +1,75 @@
+.reservation { 
+    position: relative;
+    padding-top: 36px;
+    padding-bottom: 150px;
+    overflow: hidden;
+}
+
+.reservation img { 
+    z-index: -1;
+    position: absolute; }
+
+.reservation img:first-of-type {
+    top: -20;
+    left: -10;
+}
+
+.reservation img:last-of-type {
+    right: -150px;
+    bottom: 0;
+}
+
+.reservation form {
+    width: 800px;
+    padding: 24px;
+    margin: auto;
+    text-align: center;
+}
+
+.reservation h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 29px;
+    letter-spacing: 2px;
+    color: #3d2514;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.reservation h3 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 50px;
+    letter-spacing: 3px;
+    color: #3d2514;
+    text-transform: uppercase;
+    margin-bottom: 62px;
+}
+
+.reservation .input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.reservation input {
+    flex: 0 0 calc(50% - 24px);
+    margin: 12px;
+    border-radius: 5px;
+    border: 1px solid #bebebe;
+    height: 65px;
+    padding: 0 24px;
+    text-transform: uppercase;
+    font-size: 21px;
+    color: #3d3d3d;
+    outline: none;
+}
+
+
+.reservation button {
+    flex: 0 0 calc(50% - 24px);
+    font-family: 'Alfa Slab One', cursive;
+    border-radius: 5px;
+    background-color: #bf2222;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 13px 12px;
+}
