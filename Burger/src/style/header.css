@@ -1,4 +1,7 @@
-body { font-family: "Bebas Neue", cursive; }
+body { 
+    max-width: 1440px;
+    margin: auto;
+}
 
 header {
     padding: 50px 56px;

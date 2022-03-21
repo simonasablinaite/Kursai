@@ -67,6 +67,7 @@
 }
 
 .price {
+    font-family: 'Bebas Neue', cursive;
     border: 2px dashed #fff;
     width: 100%;
     height: 100%;
