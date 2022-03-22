@@ -1,0 +1,26 @@
+.registration__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+.registration__form--input {
+    border: 1px solid grey;
+    background-color: pink;
+}
+
+
+.login__button {
+    margin: 60px;
+}
+
+.login__button--confirm {
+    color: green;
+}
+
+.login__button--cancel {
+    color: red;
+}

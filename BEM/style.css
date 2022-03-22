@@ -1,0 +1,14 @@
+.registration__form-button {
+    border: 1px solid #000;
+    background: green ;
+    color: #fff;
+}
+
+.registration__form-button--cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    background: red;
+}
