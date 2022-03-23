@@ -1,0 +1,20 @@
+div {
+    width: 100px;
+    height: 100px;
+    margin: 12px;
+    background: pink;
+}
+
+@media (min-width: 768px) {
+    div {
+        background: red;
+    }
+
+@media (min-width: 900px) {
+    div {
+            background: yellow;
+    }
+@media (min-width: 1024px) {
+    div {
+                background: green;
+    }
