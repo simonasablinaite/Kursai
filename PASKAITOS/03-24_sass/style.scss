@@ -1,0 +1,55 @@
+$pavadinimas: blue;
+
+div {
+    width: 100px;
+    height: 100px;
+    /*background: blue;*/
+    background: $pavadinimas;
+
+
+    div {
+        width: 70px;
+        height: 70px;
+        background: red;
+
+
+        div {
+            width: 50px;
+            height: 50px;
+            background: green;
+        }
+    }
+}
+
+@mixin cube($dimension: 100px, $background-color: $pavadinimas) {
+    width: $dimension;
+    height: $dimension;
+    background: $background-color;
+}
+
+div {
+    @include cube;
+
+    div{
+        @include cube(70px, red);
+    
+        div {
+            @include cube(50px, green);
+        }
+    }
+}
+
+@mixin layout($horizontal: center, $vertical: center) {
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
+}
+
+.flex {
+    @include layout(flex-start, flex-start);
+    width: 200px;
+    height: 100px;
+    background: red;
+    color: white;
+    font-size: 25px;
+}

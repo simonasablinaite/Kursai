@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.wavy {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background: #333;
+}
+
+.wavy::before {
+    content'a':
+}

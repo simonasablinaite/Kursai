@@ -19,6 +19,7 @@ button {
 
 nav {
     position: absolute;
+    top: 63px;
     display: none;
 }
 
@@ -44,12 +45,16 @@ a {
 }
 
 @media (min-width: 768px) {
+    menu {
+        text-align: center;
+    }
     svg {
         display: none;  
     }
 
 nav {
     position: relative;
+    top: 0;
     display: block;
     }
 
