@@ -1,0 +1,15 @@
+@import './theme.scss';
+
+.container {
+    max-width: 1180px;
+    margin: auto;
+}
+
+.logo {
+    text-transform: lowercase;
+    font-size: 25px;
+    font-weight: 600;
+    color: $text-color;
+}
+
+@mixin flex-layout($a: center, $b: center) {}

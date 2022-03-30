@@ -1,9 +1,17 @@
-@import './theme.scss';
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Montserrat:wght@500;600&family=Roboto:ital,wght@1,400;1,700&display=swap');
 @import './utility.scss';
+@import './theme.scss';
 
-.header {
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: $text-color;
+}
+
+header {
     @include flex-layout(space-between, center);
     padding: 26px 18px;
+    background: $white;
 }
 
 .header__navigation {
@@ -15,7 +23,7 @@
     order: 1;
 
     @media (max-width: $desktop) {
-        .header__navigation-link {
+        .header__navigation-links {
             display: none;
             position: absolute;
             top: 40px;
@@ -26,30 +34,32 @@
 
         &:focus,
         &:focus-within {
-            .header__navigation-link {
+            .header__navigation-links {
                 @include flex-layout;
                 flex-direction: column;
-                ;
             }
         }
     }
 }
+
 .header__burger-menu {
     width: 32px;
     height: 32px;
     margin-left: 48px;
     cursor: pointer;
 }
+
 .header__navigation-link {
     width: 100%;
-    font-size: $text-size;
     padding: 15px 16px 14px;
+    font-size: $text-size;
     text-align: center;
 
     &:hover {
         border-bottom: 1px solid $border-color;
     }
 }
+
 .header__getting-started-container {
     display: none;
     margin-left: 100px;
