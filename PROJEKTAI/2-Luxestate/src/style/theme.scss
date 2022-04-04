@@ -1,23 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Montserrat:wght@500;600&family=Roboto:ital,wght@1,400;1,700&display=swap');
-
-//breakpoints
-
-$mobile: 375px;
-$tablet: 768px;
-$desktop: 1024px;
+//font-family: 'Montserrat', sans-serif;
 
 //color
 
 $text-color: #1f373d;
-$primary-color: #ffcc01;
-$secondary-color: #96bece;
-$white: #fff;
+$primary-color: #96bece;
+$secondary-color: #ffcc01;
 
-//size
+//text
 
-$text-size: 13px;
+$text-font: 'Montserrat', sans-serif;
 
 //border
 
 $border-radius: 5px;
-$border-color: #1f373d;
+
+
+//breakepoints
+
+$mobile: 375px;
+$tablet: 768px;

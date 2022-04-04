@@ -1,15 +1,30 @@
-@import './theme.scss';
+@import './theme';
 
-.container {
-    max-width: 1180px;
-    margin: auto;
+
+@mixin flex-layout($horizontal: center, $vertical: center) {
+    display: flex;
+    justify-content: $horizontal;
+    align-items: $vertical;
 }
 
-.logo {
-    text-transform: lowercase;
+
+@mixin display-desktop {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin display-mobile {
+    display: block;
+}
+
+//fontai
+
+@mixin font_25 {
     font-size: 25px;
     font-weight: 600;
-    color: $text-color;
+    letter-spacing: -1;
+}
+@mixin font_13 {
+    font-size: 13px;
+    font-weight: 400;  
 }
 
-@mixin flex-layout($a: center, $b: center) {}

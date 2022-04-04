@@ -49,6 +49,8 @@ table {
 
 * {
 	box-sizing: border-box;
+	font-family: inherit;
+	color: inherit;
 }
 
 a {
@@ -61,6 +63,7 @@ input[type=number] {
 }
 
 button {
+	background: none;
 	outline: none;
 	border: none;
 	cursor: pointer;

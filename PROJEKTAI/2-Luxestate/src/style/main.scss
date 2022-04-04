@@ -1,94 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Montserrat:wght@500;600&family=Roboto:ital,wght@1,400;1,700&display=swap');
-@import './utility.scss';
-@import './theme.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import './theme';
+@import './utility';
 
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $text-font;
     color: $text-color;
 }
 
 header {
+    @include flex-layout(flex-start, center);
+    width: 1180px;
+    margin: auto;
+    padding: 5px 10px;
+
+    @media (min-width: 1024px) {
+        @include flex-layout(space-between, center)
+    }
+    
+    .logo {
+        font-size: 25px;
+        letter-spacing: -1px;
+        font-weight: 600;
+        text-transform: lowercase;
+    }
+}
+
+nav {
     @include flex-layout(space-between, center);
-    padding: 26px 18px;
-    background: $white;
-}
 
-.header__navigation {
-    @include flex-layout(flex-end, center);
-}
+        .navigation-wrapper {
+            position: relative;
+            order: 1;
+            margin-left: 24px;
 
-.header__navigation-menu {
-    position: relative;
-    order: 1;
-
-    @media (max-width: $desktop) {
-        .header__navigation-links {
-            display: none;
-            position: absolute;
-            top: 40px;
-            right: 0;
-            border: 1px solid $border-color;
-            border-radius: $border-radius;
-        }
-
-        &:focus,
-        &:focus-within {
-            .header__navigation-links {
-                @include flex-layout;
-                flex-direction: column;
+            @media (min-width: 1024px) {
+                order: 0;
             }
-        }
+
+                @media (max-width: 1024px) {
+                &:hover {
+                 menu {
+                    position: absolute;
+                    top: 38px;
+                    right: 2px;
+                    display: block;
+                    padding: 12px 16px;
+                    background: #fff;
+                    border: 1px solid #333;
+
+                    a {
+                        padding: 12px 16px; 
+                    }
+                }
+            } 
+        }  
+    }      
+
+    img {
+        width: 34px;
+        height: 34px;
+
+        @media (min-width: 1024px) {
+            display: none;
+        }           
     }
-}
+            menu {
+                display: none;
+            }
 
-.header__burger-menu {
-    width: 32px;
-    height: 32px;
-    margin-left: 48px;
-    cursor: pointer;
-}
+                 a{
+                     padding: 6px 15px;
+                     text-transform: capitalize;
 
-.header__navigation-link {
-    width: 100%;
-    padding: 15px 16px 14px;
-    font-size: $text-size;
-    text-align: center;
+                     @media (min-width: 1024px){
+                         display: block;
+                     }
+                }
+            }
+                    
 
-    &:hover {
-        border-bottom: 1px solid $border-color;
-    }
-}
-
-.header__getting-started-container {
+.getting-started {
     display: none;
-    margin-left: 100px;
+    margin: 105px;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+    a {
+        margin-right: 15px;
+    }
 }
 
-.header__getting-started-button {
-    background: $primary-color;
+button {
+    font-family: $text-font;
+    padding: 15px 24px 14px;
     border-radius: $border-radius;
-    padding: 15px 22px 14px;
-    white-space: nowrap;
-    transition: background-color 300ms ease-in-out;
-
-    &:hover {
-        background-color: $secondary-color;
-    }
-}
-
-@media (min-width: $tablet) {
-    .header__getting-started-container {
-        @include flex-layout(space-between, center);
-    }
-}
-
-@media (min-width: $desktop) {
-    .header__navigation-menu {
-        order: 0;
-    }
-
-    .header__burger-menu {
-        display: none;
-    }
+    background-color: $secondary-color;
+    text-transform: capitalize;
 }
