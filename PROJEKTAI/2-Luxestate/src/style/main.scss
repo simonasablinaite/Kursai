@@ -4,20 +4,22 @@
 
 
 body {
+    max-width: 1180px;
     font-family: $text-font;
     color: $text-color;
 }
 
 header {
     @include flex-layout(flex-start, center);
-    width: 1180px;
+    max-width: 1180px;
     margin: auto;
-    padding: 5px 10px;
+    padding: 5px 12px;
+    background: $white;
 
     @media (min-width: 1024px) {
-        @include flex-layout(space-between, center)
+        @include flex-layout(space-between, center);
     }
-    
+
     .logo {
         font-size: 25px;
         letter-spacing: -1px;
@@ -29,18 +31,18 @@ header {
 nav {
     @include flex-layout(space-between, center);
 
-        .navigation-wrapper {
-            position: relative;
-            order: 1;
-            margin-left: 24px;
+    .navigation-wrapper {
+        position: relative;
+        order: 1;
+        margin-left: 24px;
 
-            @media (min-width: 1024px) {
-                order: 0;
-            }
+        @media (min-width: 1024px) {
+            order: 0;
+        }
 
-                @media (max-width: 1024px) {
-                &:hover {
-                 menu {
+        @media (max-width: 1024px) {
+            &:hover {
+                menu {
                     position: absolute;
                     top: 38px;
                     right: 2px;
@@ -50,12 +52,12 @@ nav {
                     border: 1px solid #333;
 
                     a {
-                        padding: 12px 16px; 
+                        padding: 12px 16px;
                     }
                 }
-            } 
-        }  
-    }      
+            }
+        }
+    }
 
     img {
         width: 34px;
@@ -63,30 +65,38 @@ nav {
 
         @media (min-width: 1024px) {
             display: none;
-        }           
+        }
     }
-            menu {
-                display: none;
-            }
 
-                 a{
-                     padding: 6px 15px;
-                     text-transform: capitalize;
+    menu {
+        @media (max-width: 1024px) {
+            display: none;
+        }
 
-                     @media (min-width: 1024px){
-                         display: block;
-                     }
-                }
-            }
-                    
+    }
+
+    a {
+        padding: 6px 15px;
+        text-transform: capitalize;
+
+        @media (min-width: 1024px) {
+            display: inline;
+            align-items: center;
+        }
+    }
+}
+
 
 .getting-started {
     display: none;
-    margin: 105px;
+    margin-left: 105px;
 
     @media (min-width: 768px) {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     a {
         margin-right: 15px;
     }
@@ -99,3 +109,220 @@ button {
     background-color: $secondary-color;
     text-transform: capitalize;
 }
+
+// __________HEADER END_______________
+
+// __________Search start__________
+//___________Mobile first__________
+
+
+.search__container {
+    position: relative;
+    padding: 0 18px;
+    margin: auto;
+
+    @media (min-width: $tablet) {
+        width: 400px;
+    }
+
+    @media (min-width: $desktop) {
+        width: 630px;
+    }
+
+    .search__wrapper {
+        @include flex-layout;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 12px;
+
+        @media (min-width: $tablet) {
+            left: 178px;
+            transform: translateX(-50%);
+            width: 320px;
+        }
+
+        @media (min-width: $desktop) {
+            @include flex-layout (flex-start, flex-start);
+            top: 20%;
+        }
+    }
+
+
+    .search__heading {
+        font-size: 32px;
+        font-weight: 600;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        color: $text-color;
+        margin: 24px auto 24px 0;
+        width: 65%;
+
+        @media (min-width: $tablet) {
+            width: 320px;
+        }
+
+        @media (min-width: $desktop) {
+            font-size: 62px;
+            line-height: 78px;
+            // width: 70%;
+            width: 630px;
+            margin: 24px auto 24px 0;
+        }
+    }
+
+    .search__blue-box {
+        @include flex-layout(flex-end, flex-end);
+        background: $primary-color;
+        height: 525px;
+        width: 85%;
+        margin-top: 30px;
+        margin-left: 95px;
+
+        @media (min-width: $tablet) {
+            height: 630px;
+            width: 85%;
+
+            @media (min-width: $desktop) {
+                width: 957px;
+                height: 630px;
+                width: 100%;
+
+            }
+        }
+
+
+        .search__contacts {
+            @include flex-layout(center, flex-start);
+            flex-direction: column;
+            width: 100%; //desktop:50%
+            padding: 12px 24px 11px;
+            background: $secondary-color;
+            width: 85%;
+
+            @media (min-width: $tablet) {
+                flex-direction: row;
+                width: auto;
+                padding: 17px 36px 15px;
+            }
+
+            .search__contact {
+                @include flex-layout(flex-start, flex-start);
+                flex: 0 0 50%;
+                font-size: 13px;
+                font-weight: 600;
+
+                &:first-of-type {
+                    margin-bottom: 12px;
+
+                    @media (min-width: $tablet) {
+                        margin-bottom: 0;
+                        font-size: 15px;
+                    }
+
+                    @media (min-width: $desktop) {
+                        margin-bottom: 0;
+                        font-size: 18px;
+                    }
+
+                    img {
+                        margin-right: 16px;
+
+                        @media (min-width: $desktop) {
+                            margin-right: 35px;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        .search__scroll-down {
+            @include flex-layout;
+            position: absolute;
+            bottom: 54px;
+            left: -32px;
+            transform: rotate(-90deg);
+
+            img {
+                transform: rotate(90deg);
+            }
+
+            div {
+                margin-left: 20px;
+                color: $third-color;
+                font-size: 15px;
+            }
+        }
+    }
+
+}
+
+.search__input-wrapper {
+    @include flex-layout(center, center);
+    position: relative;
+    font-size: 15px;
+    // padding: 12px 28px 12px;
+
+    img {
+        position: absolute;
+        top: 35%;
+        left: -75%;
+        transform: translateY(-50);
+
+        @media (min-width: $table) {
+            left: -75%;
+
+            @media (min-width: $desktop) {
+                top: 40%;
+                left: -35px;
+            }
+        }
+
+        input {
+            font-size: $text-font;
+            display: inline; // žymėta block, bet man netinka sukritimas vienas po kitu
+            background: #fff;
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+            padding: 18px 18px 17px;
+
+
+            @media (min-width: $tablet) {
+                padding: 18px 58px 17px;
+                margin-right: 55px;
+            }
+
+            @media (min-width: $desktop) {
+                padding: 30px 58px 28px;
+                width: 375px;
+                //    margin-right: 65px; 
+            }
+        }
+
+        button {
+            font-family: $text-font;
+            padding: 18px 18px 17px;
+            font-weight: 500;
+            font-size: 13px;
+            border-top-right-radius: $border-radius; //kadangi button nurodytas radius, visi kampai apvalus
+            border-bottom-right-radius: $border-radius;
+            margin-right: 50%;
+
+
+            @media (min-width: $tablet) {
+                padding: 18px 34px 17px;
+
+                @media (min-width: $desktop) {
+                    padding: 30px 34px 28px;
+                    margin-left: -60px;
+                }
+            }
+        }
+    }
+}
+
+// _____________search end___________________
+
+// ________company statistics________________
