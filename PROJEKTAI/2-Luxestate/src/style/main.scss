@@ -176,8 +176,8 @@ button {
         background: $primary-color;
         height: 525px;
         width: 85%;
-        margin-top: 30px;
-        margin-left: 95px;
+        margin-top: 30px 95px 145px;
+       
 
         @media (min-width: $tablet) {
             height: 630px;
@@ -271,7 +271,7 @@ button {
         left: -75%;
         transform: translateY(-50);
 
-        @media (min-width: $table) {
+        @media (min-width: $tablet) {
             left: -75%;
 
             @media (min-width: $desktop) {
@@ -297,9 +297,9 @@ button {
             @media (min-width: $desktop) {
                 padding: 30px 58px 28px;
                 width: 375px;
-                //    margin-right: 65px; 
             }
         }
+    }
 
         button {
             font-family: $text-font;
@@ -321,8 +321,62 @@ button {
             }
         }
     }
-}
+
 
 // _____________search end___________________
 
-// ________company statistics________________
+// _____________about company________________
+
+#about {
+    display: flex;
+}
+.about-container {
+
+    .about__left-side {
+        margin-left: 12px;
+
+        h3 {
+            font-size: 40px;
+            letter-spacing: -1;
+            line-height: 50px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 2;
+            font-weight: 400;
+            
+            &:first-of-type {
+                margin-bottom: 45px;
+            }
+
+        }
+    }
+
+    .about__right-side {
+        .about__milestone {
+            width: 200px;
+            height: 200px;
+            background-color: #f5f6f4;
+
+            
+
+            div {
+                font-size: 40px;
+                letter-spacing: -1px;
+                line-height: 50px;
+                color: $secondary-color;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: 600;
+                color: $text-color;
+            }
+        }
+    }
+}
+

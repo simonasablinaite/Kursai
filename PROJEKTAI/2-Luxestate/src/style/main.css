@@ -246,8 +246,7 @@ button {
   background: #96bece;
   height: 525px;
   width: 85%;
-  margin-top: 30px;
-  margin-left: 95px;
+  margin-top: 30px 95px 145px;
 }
 
 @media (min-width: 768px) {
@@ -386,19 +385,25 @@ button {
 .search__input-wrapper img {
   position: absolute;
   top: 35%;
-  left: 0;
+  left: -75%;
   -webkit-transform: translateY(-50);
           transform: translateY(-50);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .search__input-wrapper img {
-    top: 40%;
-    left: 25px;
+    left: -75%;
   }
 }
 
-.search__input-wrapper input {
+@media (min-width: 768px) and (min-width: 1024px) {
+  .search__input-wrapper img {
+    top: 40%;
+    left: -35px;
+  }
+}
+
+.search__input-wrapper img input {
   font-size: "Montserrat", sans-serif;
   display: inline;
   background: #fff;
@@ -408,14 +413,14 @@ button {
 }
 
 @media (min-width: 768px) {
-  .search__input-wrapper input {
+  .search__input-wrapper img input {
     padding: 18px 58px 17px;
     margin-right: 55px;
   }
 }
 
 @media (min-width: 1024px) {
-  .search__input-wrapper input {
+  .search__input-wrapper img input {
     padding: 30px 58px 28px;
     width: 375px;
   }
@@ -440,7 +445,55 @@ button {
 @media (min-width: 768px) and (min-width: 1024px) {
   .search__input-wrapper button {
     padding: 30px 34px 28px;
-    margin-left: 0;
+    margin-left: -60px;
   }
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-container .about__left-side {
+  margin-left: 12px;
+}
+
+.about-container .about__left-side h3 {
+  font-size: 40px;
+  letter-spacing: -1;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.about-container .about__left-side p {
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.about-container .about__left-side p:first-of-type {
+  margin-bottom: 45px;
+}
+
+.about-container .about__right-side .about__milestone {
+  width: 200px;
+  height: 200px;
+  background-color: #f5f6f4;
+}
+
+.about-container .about__right-side .about__milestone div {
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 50px;
+  color: #ffcc01;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-container .about__right-side .about__milestone span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f373d;
 }
 /*# sourceMappingURL=main.css.map */
