@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   max-width: 1180px;
   font-family: "Montserrat", sans-serif;
@@ -453,13 +457,68 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 44px;
+}
+
+@media (min-width: 1024px) {
+  #about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 144px;
+  }
+}
+
+.about-container {
+  position: relative;
+  padding: 0 18px;
+  margin: 0 auto 44px;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-container {
+    height: 630px;
+    margin-bottom: 144px;
+  }
 }
 
 .about-container .about__left-side {
   margin-left: 12px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - -28px);
+          flex: 0 1 calc(50% - -28px);
+  margin-right: 135px;
 }
 
 .about-container .about__left-side h3 {
+  width: 315px;
+  margin-bottom: 69px;
   font-size: 40px;
   letter-spacing: -1;
   line-height: 50px;
@@ -470,13 +529,63 @@ button {
   font-size: 13px;
   line-height: 2;
   font-weight: 400;
+  margin-bottom: 28px;
 }
 
 .about-container .about__left-side p:first-of-type {
   margin-bottom: 45px;
 }
 
+@media (min-width: 768px) {
+  .about-container .about__left-side {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-container .about__left-side {
+    margin-bottom: 0;
+    margin-right: 135px;
+  }
+}
+
+.about-container .about__right-side {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (150px)[2];
+      grid-template-columns: repeat(2 150px);
+  -ms-grid-rows: 2 150px;
+      grid-template-rows: 2 150px;
+  grid-gap: 14px;
+}
+
+@media (min-width: 768px) {
+  .about-container .about__right-side {
+    -ms-grid-columns: (200px)[2];
+        grid-template-columns: repeat(2, 200px);
+    -ms-grid-rows: 2, 200px;
+        grid-template-rows: 2, 200px;
+    grid-gap: 28px;
+  }
+}
+
 .about-container .about__right-side .about__milestone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 200px;
   height: 200px;
   background-color: #f5f6f4;
@@ -495,5 +604,78 @@ button {
   font-size: 14px;
   font-weight: 600;
   color: #1f373d;
+}
+
+.appartments__wrapper {
+  background-color: #f6f5f4;
+  padding: 67px 12px 77px;
+}
+
+#appartments h2 {
+  width: 50%;
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 50px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #1f373d;
+  margin-bottom: 82px;
+}
+
+#appartments .appartments___cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px 34px;
+}
+
+#appartments .appartments___cards .appartments__card img {
+  width: 100%;
+  height: 380px;
+  background-color: #96bece;
+}
+
+#appartments .appartments___cards .appartments__card .appartments__card-footer h4 {
+  font-size: 15px;
+  color: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+#appartments .appartments___cards .appartments__card .appartments__card-footer small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-end;
+          flex-direction: flex-end;
+  font-size: 18px;
+  line-height: 50px;
+  font-weight: 600;
+  color: #ffcc01;
+}
+
+#appartments .appartments__search .input__wrapper {
+  margin-right: 40px;
+}
+
+#appartments .appartments__search button {
+  font-size: 15px;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 18px 18px 17px;
+}
+
+@media (min-width: 768px) {
+  #appartments .appartments__search button {
+    padding: 18px 34px 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #appartments .appartments__search button {
+    padding: 30px 48px 28px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

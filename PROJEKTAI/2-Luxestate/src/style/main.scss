@@ -2,6 +2,9 @@
 @import './theme';
 @import './utility';
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     max-width: 1180px;
@@ -177,7 +180,7 @@ button {
         height: 525px;
         width: 85%;
         margin-top: 30px 95px 145px;
-       
+
 
         @media (min-width: $tablet) {
             height: 630px;
@@ -301,26 +304,26 @@ button {
         }
     }
 
-        button {
-            font-family: $text-font;
-            padding: 18px 18px 17px;
-            font-weight: 500;
-            font-size: 13px;
-            border-top-right-radius: $border-radius; //kadangi button nurodytas radius, visi kampai apvalus
-            border-bottom-right-radius: $border-radius;
-            margin-right: 50%;
+    button {
+        font-family: $text-font;
+        padding: 18px 18px 17px;
+        font-weight: 500;
+        font-size: 13px;
+        border-top-right-radius: $border-radius; //kadangi button nurodytas radius, visi kampai apvalus
+        border-bottom-right-radius: $border-radius;
+        margin-right: 50%;
 
 
-            @media (min-width: $tablet) {
-                padding: 18px 34px 17px;
+        @media (min-width: $tablet) {
+            padding: 18px 34px 17px;
 
-                @media (min-width: $desktop) {
-                    padding: 30px 34px 28px;
-                    margin-left: -60px;
-                }
+            @media (min-width: $desktop) {
+                padding: 30px 34px 28px;
+                margin-left: -60px;
             }
         }
     }
+}
 
 
 // _____________search end___________________
@@ -328,14 +331,39 @@ button {
 // _____________about company________________
 
 #about {
-    display: flex;
+    @include flex-layout;
+    flex-direction: column;
+    margin-bottom: 44px;
+
+    @media (min-width: $desktop) {
+        @include flex-layout(space-between, center);
+        flex-direction: row;
+        margin-bottom: 144px;
+    }
 }
+
 .about-container {
+    position: relative;
+    padding: 0 18px;
+    margin: 0 auto 44px;
+
+    @media (min-width: $tablet) {
+        height: 400px;
+    }
+
+    @media (min-width: $desktop) {
+        height: 630px;
+        margin-bottom: 144px;
+    }
 
     .about__left-side {
         margin-left: 12px;
+        flex: 0 1 calc(50% - -28px);
+        margin-right: 135px;
 
         h3 {
+            width: 315px;
+            margin-bottom: 69px;
             font-size: 40px;
             letter-spacing: -1;
             line-height: 50px;
@@ -346,21 +374,43 @@ button {
             font-size: 13px;
             line-height: 2;
             font-weight: 400;
-            
+            margin-bottom: 28px;
+
             &:first-of-type {
                 margin-bottom: 45px;
             }
+        }
+
+        @media (min-width: $tablet) {
+            width: 70%;
+        }
+
+        @media (min-width: $desktop) {
+            margin-bottom: 0;
+            margin-right: 135px;
 
         }
     }
 
     .about__right-side {
+        flex: 0 0 50%;
+        display: grid;
+        grid-template-columns: repeat(2 150px);
+        grid-template-rows: (2 150px);
+        grid-gap: 14px;
+
+        @media (min-width: $tablet) {
+            grid-template-columns: repeat(2, 200px);
+            grid-template-rows: (2, 200px);
+            grid-gap: 28px;
+        }
+
         .about__milestone {
+            @include flex-layout;
+            flex-direction: column;
             width: 200px;
             height: 200px;
             background-color: #f5f6f4;
-
-            
 
             div {
                 font-size: 40px;
@@ -380,3 +430,86 @@ button {
     }
 }
 
+// __________about company end__________
+
+// __________appartments cards____________
+
+.appartments__wrapper {
+    background-color: #f6f5f4;
+    padding: 67px 12px 77px;
+}
+
+#appartments {
+
+
+    h2 {
+        width: 50%;
+        font-size: 40px;
+        letter-spacing: -1px;
+        line-height: 50px;
+        font-weight: 600;
+        font-family: $text-font;
+        color: $text-color;
+        margin-bottom: 82px;
+    }
+
+    .appartments___cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px 34px;
+
+        .appartments__card {
+            img {
+                width: 100%;
+                height: 380px;
+                background-color: $primary-color;
+            }
+
+
+            .appartments__card-footer {
+                h4 {
+                    font-size: 15px;
+                    color: $text-font;
+                    font-weight: 600;
+                }
+
+            small {
+                display: flex;
+                flex-direction: flex-end;
+                font-size: 18px;
+                line-height: 50px;
+                font-weight: 600;
+                color: $secondary-color;
+            }
+
+            ul {
+          
+
+            }
+        }
+
+    }
+}
+
+
+.appartments__search {
+    .input__wrapper {
+        margin-right: 40px;
+    }
+
+    button {
+        font-size: 15px;
+        font-weight: 400;
+        border-radius: $border-radius;
+        padding: 18px 18px 17px;
+
+        @media (min-width: $tablet) {
+            padding: 18px 34px 17px;
+        }
+
+        @media (min-width: $desktop) {
+            padding: 30px 48px 28px;
+        }
+    }
+}
+}
