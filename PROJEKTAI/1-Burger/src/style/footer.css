@@ -53,9 +53,11 @@ footer .contacts li {
 footer .contacts ul {
     margin-bottom: 213px;
 }
+
 footer .contacts li:last-of-type {
     margin-bottom: 0;
 }
+
 footer .contacts span {
     font-family: 'Bebas Neue', cursive;
     line-height: 38px;;
@@ -63,6 +65,7 @@ footer .contacts span {
     font-weight: 500;
     margin-left: 34px;
 }
+
 footer .bottom-side {
     position:absolute;
     display: flex;
@@ -72,13 +75,16 @@ footer .bottom-side {
     left: 14px;
     bottom:0;
 }
+
 footer .small {
     font-family: 'Bebas Neue', cursive;
     font-size: 17px;
 }
+
 footer .social-media {
     display: flex;
 }
+
 footer .social-media li {
     margin-left: 12px;
 }
