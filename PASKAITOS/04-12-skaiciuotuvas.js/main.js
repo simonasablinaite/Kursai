@@ -10,25 +10,26 @@ function addNumber(number) {
         answerZone.textContent += number;
 
     }
-
-    function deleteNumber() {  
-        answerZone.textContent = answerZone.textContent.slice(0, -1); //neaiski funkcija, kazkodel prigesusi
-        if (answerZone.textContent.length == 0) {
-            answerZone.textContent = 0;
-        }
-    }
-
-
-
-    // pirmas/paprastesnis budas nurodyti matematinius skaiciavimus. Kiekvienam mat.veiksmui vis nauja funkcija. Nepatogu.
-    // function plusAction () {
-    //     firstNumber = Number(answerZone.textContent);
-    //     answerZone.textContent = 0;
-    // }
-
-    // function equalsAction () {
-    //     answerZone.textContent = firstNumber + Number(answerZone.textContent);
 }
+
+function deleteNumber() {
+    answerZone.textContent = answerZone.textContent.slice(0, -1); 
+    if (answerZone.textContent.length == 0) {
+        answerZone.textContent = 0;
+    }
+}
+
+
+
+// pirmas/paprastesnis budas nurodyti matematinius skaiciavimus. Kiekvienam mat.veiksmui vis nauja funkcija. Nepatogu.
+// function plusAction () {
+//     firstNumber = Number(answerZone.textContent);
+//     answerZone.textContent = 0;
+// }
+
+// function equalsAction () {
+//     answerZone.textContent = firstNumber + Number(answerZone.textContent);
+
 
 // kitas būdas atlikti mat.veiksmus - visiems priskirti viena klase. naudoti salygos sakinius taip vykdant parametrus:
 
@@ -48,7 +49,7 @@ function equalsAction() {
         answerZone.textContent = previestNumber - Number(answerZone.textContent);
     } else if (symbol == '*') {
         answerZone.textContent = previestNumber * Number(answerZone.textContent);
-    }else if (symbol == '/') {
+    } else if (symbol == '/') {
         answerZone.textContent = previestNumber / Number(answerZone.textContent);
     }
 }
