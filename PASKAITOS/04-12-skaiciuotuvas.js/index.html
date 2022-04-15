@@ -13,65 +13,95 @@
 
     <link href="./main.js">
 
+
+
 </head>
 
 <body>
     <section>
-        <div class="container">
+        <div class="container border border-success border-5 my-4">
 
-            <div class="row">
-                <div id="numberZone" class="col-12">
-                    0
+            <div class="row justify-content-center">
+                <div onclick id="answerZone" class="col-12 p-3 fs-2">0</div>
+            </div> 
+
+            <div class="row justify-content-center">
+                <div class="col-1 p-2 ">
+                    
+                </div>
+                <div class="col-1 p-2">
+                    
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="deleteNumber()"><img src="./src/assets/backspace.svg"></button>  
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="mathActions('/')">/</button>  
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-1">
-                    <button onclick="addNumber(1)">1</button>
-                </div>
-                <div class="col-1">
-                    <button onclick="addNumber(2)">2</button>
-                </div>
-                <div class="col-1">
-                    <button onclick="addNumber(3)">3</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1">
-                    <button onclick="addNumber(4)">4</button>
-                </div>
-                <div class="col-1">
-                    <button onclick="addNumber(5)">5</button>
-                </div>
-                <div class="col-1">
-                    <button onclick="addNumber(6)">6</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-1">
+            <div class="row justify-content-center">
+                <div class="col-1 p-2">
                     <button onclick="addNumber(7)">7</button>
                 </div>
-                <div class="col-1">
+                <div class="col-1 p-2">
                     <button onclick="addNumber(8)">8</button>
                 </div>
-                <div class="col-1">
+                <div class="col-1 p-2">
                     <button onclick="addNumber(9)">9</button>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-1">
-                    <button onclick="addNumber()"></button>
+                <div class="col-1 p-2">
+                    <button onclick="mathActions('*')">*</button>
                 </div>
-                <div class="col-1">
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-1 p-2">
+                    <button onclick="addNumber(4)">4</button>
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="addNumber(5)">5</button>
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="addNumber(6)">6</button>
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="mathActions('-')">-</button> <!--minusAction keicia mathActions-->
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-1 p-2">
+                    <button onclick="addNumber(1)">1</button>
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="addNumber(2)">2</button>
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="addNumber(3)">3</button>
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="mathActions('+')">+</button> <!--plusAction keicia mathActions-->
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-1 p-2">
+                    <button onclick="mathAction()"><img src="./src/assets/plus-slash-minus.svg"></button>
+                </div>
+                <div class="col-1 p-2">
                     <button onclick="addNumber(0)">0</button>
                 </div>
-                <div class="col-1">
-                    <button onclick="addNumber()"></button>
+                <div class="col-1 p-2">
+                    <button onclick="addSimbol()">,</button>
+                </div>
+                <div class="col-1 p-2">
+                    <button onclick="equalsAction()">=</button>
                 </div>
             </div>
-            </div>
+
+        </div>
+        </div>
+
     </section>
 
 </body>
