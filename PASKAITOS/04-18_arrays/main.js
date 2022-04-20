@@ -75,19 +75,19 @@ function updateLists() {
 
         listElement.onclick = () => {
             doneArray.push(todoArray.splice(index, 1));
-            updateLists;
+            updateLists();
         }
         todo.appendChild(listElement);
         // todo.innerHTML += `<div>${todoArray[index]}</div>`
     }
 
-    for (let index = 0; index < done.length; index++) {
+    for (let index = 0; index < doneArray.length; index++) {
         const listElement = document.createElement('div');
         listElement.textContent = doneArray[index];
 
         listElement.onclick = () => {
             todoArray.push(doneArray.splice(index, 1));
-            updateLists;
+            updateLists();
 
             // done.inner += `<div>${doneArray[index]}</div>`
         }
