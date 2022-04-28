@@ -10,10 +10,16 @@ console.log(number);
 
 // Boolean metodas:
 
-const isWorking = true;
-const isUnemployed = false;
-console.log(isWorking);
-console.log(isUnemployed);
+const isWorking = new Boolean(true) 
+if (isWorking) {
+    console.log(isWorking);
+}
+
+
+// const isWorking = true;
+// const isUnemployed = false;
+// console.log(isWorking);
+// console.log(isUnemployed);
 
 // Array metodas:
 
@@ -127,11 +133,11 @@ for (let [key, value] of Object.entries(lexusRX350)) {
  lexusRX350.price = number
  console.log(lexusRX350.price); //ar turi perrasyti kita skaiciu, ar turi buti gaunama reiksme is objekto tai yra price: 16.900???????
 
- lexusRX350.fuelType = boolean
+ lexusRX350.isWorking = boolean
                                     //pasiaiskinti del salygos parasymo su boolean!!!!!!!!!
- if (fuelType = 'gasoline') {
-     console.log(true)
- }
+//  if (fuelType = 'gasoline') {
+//      console.log(true)
+//  }
 
 // Object.assign(lexusRX350, { a: number, b: boolean})  // siuo metodu nesigavo!!!!!!
 //  console.log(lexusRX350);
@@ -154,6 +160,25 @@ function getResultsOfArray() {  // cia document.getElementById ar createElement 
 }
 
 // HTML'e susikurti input ir button ant kurio paspaudus konsoleje atvaizduos mano ivesta input reiksme:
+
+const input = document.getElementById('inputValue'); // issitraukiamas inputas is html'o
+const anotherArr = []; //pridedamas tuscias array, kad kiekviena karta butu kur ideti nauja reiksme is input.value
+
+function inputValueResults() {
+    if (!anotherArr.includes(input.value) && input.value !== '') { // jei sukurtas tuscias array apima inputo reiksme // "&& input.value !== ''" reiskia, kad nauja inputo reiksme nebutu tuscia
+        anotherArr.push(input.value); // tada i tuscia areju pusinama (idedama) parasyta inputo reiksme
+    }
+    inputValueDisplayElement.textContent += input.value  //nepasiekia elemento!!!!!!!!
+    // console.log(inputValue.value);
+}
+
+// I html prisideti papildoma elementa, kuriame, paspaudus auksciau esancios uzduoties mygtuka, atvaizduos input reiksmes teksta (vietoje console.log):
+
+const inputValueDisplayElement = document.getElementById('inputValueDisplay');
+
+
+
+
 
 
 

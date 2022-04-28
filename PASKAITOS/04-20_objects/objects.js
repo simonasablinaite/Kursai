@@ -17,6 +17,7 @@ let characters = [
         mass: '77',
         eye_color: 'blue',
         gender: 'male',
+        
     },
 
     {
