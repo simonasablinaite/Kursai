@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FrontEnd_40 group table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <section class="table-container">
+        <h1 class="m-3">Front-end_40 group</h1>
+
+        <table class="table text-center m-3">
+           <thead class="table-dark">
+                <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Hobby</th>
+                <th>Height</th>
+                <th>Programming skill</th>
+                </tr>
+            </thead>
+
+            <tbody id="myTBody"></tbody>
+        </table>
+        <form>
+            <button id ="onlyMale" onclick="renderTableData(sortByAlphabet1)">Only Man</button>
+            <button id ="onlyFemale" onclick="renderTableData(sortByAlphabet2)">Only Woman</button>
+            <button id="youngerThan30" onclick="renderTableData(youngrThan30Filter)">Youngr than 30</button>
+
+          
+        </form>
+    </section>
+</body>
+
+<script src="./objectsHW.js"></script>
+
+</html>

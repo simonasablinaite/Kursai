@@ -64,33 +64,74 @@ function addNewTodo() {
 }
 
 
-function updateLists() {
-    todo.innerHTML = '';
-    done.innerHTML = '';
 
-    for (let index = 0; index < todoArray.length; index++) {
+function updateLists() {    // sukuriame f-ja
+    todo.innerHTML = ' ';  // isvalome list'us, kad pradetume nuo svaraus elemento
+    done.innerHTML = ' ';
 
-        const listElement = document.createElement('div');
-        listElement.textContent = todoArray[index];
-
-        listElement.onclick = () => {
-            doneArray.push(todoArray.splice(index, 1));
-            updateLists();
+    for (let i = 0; i < todoArray.length; i++) {  // pradedame sukti/vykdyti cikla per ta array, is kurio norime isimti item'a. Kur: i - index trumpinys; ++ - inkrementavimas
+        const listElement = document.createElement('div'); // sukuriame list element (tai gali buti div, li, span ir panasiai) panaudojant .createElement
+        listElement.textContent = todoArray[i]; // sukurtam list elementui prilyginam teksto reiksme pagal indexa
+        listElement.onclick = () => { // list elementui pridedame onclick funkcija, kad galetume spustelti elementus
+            doneArray.push(todoArray.splice(i, 1)[0]); // perkeliami paspaudziami elementai is vieno array i kita. Siuo atveju: i done array perkeliami duomenys is todo array.    
+            updateLists(); // iskvieciame updateLists(), nes keiciasi duomenys 
         }
-        todo.appendChild(listElement);
-        // todo.innerHTML += `<div>${todoArray[index]}</div>`
+
+        todo.appendChild(listElement); // i lista is kurio isimame item'a, pridedame vaika - sukurta listElement
     }
 
-    for (let index = 0; index < doneArray.length; index++) {
+    // kad f-ja vyktu abipusei, butu galima duomenis perkelti is vieno array i kita, f-ja reikia pakartoti ir su kitu array:
+    for (let i = 0; i < doneArray.length; i++) {
         const listElement = document.createElement('div');
-        listElement.textContent = doneArray[index];
+        listElement.textContent = doneArray[i];
 
         listElement.onclick = () => {
-            todoArray.push(doneArray.splice(index, 1));
+            todoArray.push(doneArray.splice(i, 1)[0]);
             updateLists();
-
-            // done.inner += `<div>${doneArray[index]}</div>`
         }
         done.appendChild(listElement);
     }
 }
+
+
+// -------------------Ciklu pavyzdziai:-----------------------------------
+
+const array = [];
+
+for (let i = 0; i < 10; i++) {
+    array.push(Math.random());
+}
+console.log(array);
+
+// filter f-ja:
+
+const filteredArray = [];
+
+function filterArray() {
+    for (let number of array) {
+        if (number >= 0.5) {
+            filteredArray.push(number);
+        }
+    }
+}
+filterArray();
+console.log(filteredArray);
+
+// Kitas filter f-jos rasymo budas:
+
+const filterMethod = array.filter((number) => number >= 0.4)
+console.log(filterMethod);
+
+// reduse metodas:
+
+const reducedArray = filteredArray.reduce((previest, current) => previest + current);
+console.log(reducedArray);
+
+// some metodas:
+
+const someArray = filteredArray.some((number) => number >= 0.7);
+console.log(someArray);
+
+
+
+
