@@ -133,7 +133,7 @@ for (let [key, value] of Object.entries(lexusRX350)) {
  lexusRX350.price = number
  console.log(lexusRX350.price); //ar turi perrasyti kita skaiciu, ar turi buti gaunama reiksme is objekto tai yra price: 16.900???????
 
- lexusRX350.isWorking = boolean
+ lexusRX350.isWorking = isWorking
                                     //pasiaiskinti del salygos parasymo su boolean!!!!!!!!!
 //  if (fuelType = 'gasoline') {
 //      console.log(true)
@@ -175,6 +175,8 @@ function inputValueResults() {
 // I html prisideti papildoma elementa, kuriame, paspaudus auksciau esancios uzduoties mygtuka, atvaizduos input reiksmes teksta (vietoje console.log):
 
 const inputValueDisplayElement = document.getElementById('inputValueDisplay');
+
+// pasiaiskinti 26 uzduoti!!!!!!!
 
 
 
